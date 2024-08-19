@@ -180,26 +180,20 @@ app.post('/generate-font-image', (req, res) => {
 
     // 调用 Python 脚本生成图像
     const pythonScriptPath = path.join(__dirname, 'generate_image.py');
-    execFile('python', [pythonScriptPath, text], { encoding: 'utf8' }, (error, stdout, stderr) => {
+    execFile('python', [pythonScriptPath, text], (error, stdout, stderr) => {
         if (error) {
             console.error(`Error: ${stderr}`);
             return res.status(500).send('Error generating image');
         }
 
-        // 获取生成的图片文件路径
+        // 输出图像路径
         const outputFilePath = stdout.trim();
-        const fileName = path.basename(outputFilePath);  // 获取文件名
-        const imageUrl = `http://${req.headers.host}/images/ancient_modern/${fileName}`;  // 构造图片的 URL
-
-        // 返回图片的 URL
-        res.json({ imageUrl });
+        res.sendFile(outputFilePath);
     });
 });
-
 // 静态文件服务，用于提供生成的图片
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
