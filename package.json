@@ -1,0 +1,26 @@
+{
+  "name": "api_1",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "body-parser": "^1.20.2",
+    "canvas": "^2.11.2",
+    "cnchar": "^3.2.6",
+    "cnchar-draw": "^3.2.6",
+    "cnchar-order": "^3.2.6",
+    "cnchar-poly": "^3.2.6",
+    "express": "^4.19.2",
+    "jsdom": "^24.1.1",
+    "jsdom-global": "^3.0.2",
+    "sharp": "^0.33.4",
+    "uuid": "^10.0.0"
+  },
+  "description": ""
+}
