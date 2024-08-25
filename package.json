@@ -16,9 +16,11 @@
     "cnchar-draw": "^3.2.6",
     "cnchar-order": "^3.2.6",
     "cnchar-poly": "^3.2.6",
+    "cnchar-radical": "^3.2.6",
     "express": "^4.19.2",
     "jsdom": "^24.1.1",
     "jsdom-global": "^3.0.2",
+    "puppeteer": "^23.1.1",
     "sharp": "^0.33.4",
     "uuid": "^10.0.0"
   },
